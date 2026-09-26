@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Estúdio Caleidoscópio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="canvas"></canvas>
+
+  <div id="ui">
+    <button id="toggleUi" title="Mostrar/ocultar painel">⚙️</button>
+
+    <div id="panel">
+      <h1>Estúdio Caleidoscópio</h1>
+
+      <label>
+        Espelhos (simetria)
+        <input type="range" id="segments" min="2" max="24" step="1" value="8">
+        <span class="val" id="segmentsVal">8</span>
+      </label>
+
+      <label>
+        Espessura do traço
+        <input type="range" id="brush" min="1" max="40" step="1" value="6">
+        <span class="val" id="brushVal">6</span>
+      </label>
+
+      <label>
+        Velocidade das cores
+        <input type="range" id="speed" min="0" max="10" step="1" value="3">
+        <span class="val" id="speedVal">3</span>
+      </label>
+
+      <label>
+        Rastro (permanência)
+        <input type="range" id="trail" min="1" max="100" step="1" value="12">
+        <span class="val" id="trailVal">12</span>
+      </label>
+
+      <label class="checkbox">
+        <input type="checkbox" id="particles" checked>
+        Partículas brilhantes
+      </label>
+
+      <label class="checkbox">
+        <input type="checkbox" id="mirrorVertical" checked>
+        Espelhar verticalmente também
+      </label>
+
+      <div class="buttons">
+        <button id="clear">Limpar tela</button>
+        <button id="save">Salvar imagem</button>
+      </div>
+
+      <p class="hint">Desenhe com o mouse (ou dedo no celular). Segure e arraste perto do centro para os melhores padrões.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
